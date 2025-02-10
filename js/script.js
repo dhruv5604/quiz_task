@@ -1,6 +1,5 @@
 import questions from "./questions.js";
 
-
 const quiz = document.getElementById("quiz");
 const result = document.getElementById("result");
 const submitBtn = document.getElementById("submit");
@@ -10,7 +9,6 @@ const showAns = document.getElementById("showAnswer");
 let currentQuestion = 0;
 let score = 0;
 let incorrectQue = [];
-
 
 function displayQuestion() {
     const queData = questions[currentQuestion];
