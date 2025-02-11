@@ -9,8 +9,15 @@ const showAns = document.getElementById("showAnswer");
 let currentQuestion = 0;
 let score = 0;
 let incorrectQue = [];
+let questionTimer;
+let countdownTimer;
+let timeLeft = 15;
 
 function displayQuestion() {
+    clearTimeout(questionTimer);
+    clearInterval(countdownTimer);
+    timeLeft = 15;
+
     const queData = questions[currentQuestion];
 
     const queEle = document.createElement("div");
@@ -35,35 +42,59 @@ function displayQuestion() {
         option.appendChild(radio);
         option.appendChild(optionText);
         optionEle.appendChild(option);
-    }   
+    }
 
     quiz.innerHTML = '';
     quiz.appendChild(queEle);
     quiz.appendChild(optionEle);
+
+    const countdownEle = document.createElement("div");
+    countdownEle.id = "countdown";
+    countdownEle.className = "countdown";
+    countdownEle.innerHTML = `Time Left: ${timeLeft}s`;
+    quiz.appendChild(countdownEle);
+
+    startCountdown();
+
+    questionTimer = setTimeout(() => {
+        checkAnswer(true);
+    }, 15000);
 }
 
-function checkAnswer() {
+function startCountdown() {
+    countdownTimer = setInterval(() => {
+        timeLeft--;
+        document.getElementById("countdown").innerHTML = `Time Left: ${timeLeft}s`;
+
+        if (timeLeft <= 0) {
+            clearInterval(countdownTimer);
+        }
+    }, 1000);
+}
+
+function checkAnswer(autoSubmit = false) {
+    clearTimeout(questionTimer);
+    clearInterval(countdownTimer);
+
     const selectedOption = document.querySelector("input[name='quiz']:checked");
-    if (selectedOption) {
-        let answer = selectedOption.value;
-        if (answer == questions[currentQuestion].answer) {
-            score++;
-        } else {
-            incorrectQue.push({
-                question: questions[currentQuestion].question,
-                incorrectAnswers: answer,
-                correctAnswer: questions[currentQuestion].answer
-            });
-        }
+    let answer = selectedOption ? selectedOption.value : null;
 
-        currentQuestion++;
-        selectedOption.checked = false;
+    if (answer === questions[currentQuestion].answer) {
+        score++;
+    } else {
+        incorrectQue.push({
+            question: questions[currentQuestion].question,
+            incorrectAnswers: answer || "No answer selected",
+            correctAnswer: questions[currentQuestion].answer
+        });
+    }
 
-        if (currentQuestion < questions.length) {
-            displayQuestion();
-        } else {
-            displayResult();
-        }
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        displayQuestion();
+    } else {
+        displayResult();
     }
 }
 
@@ -111,7 +142,7 @@ function showAnswer() {
   `;
 }
 
-submitBtn.addEventListener("click", checkAnswer);
+submitBtn.addEventListener("click", () => checkAnswer(false));
 retryBtn.addEventListener("click", retryQuiz);
 showAns.addEventListener("click", showAnswer);
 
