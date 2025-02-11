@@ -1,0 +1,108 @@
+{
+    "questions": [
+        {
+            "question": "What is JavaScript?",
+            "options": [
+                {
+                    "title": "JavaScript is a scripting language used to make the website interactive",
+                    "option": "a",
+                    "id": 1
+                },
+                {
+                    "title": "JavaScript is an assembly language used to make the website interactive",
+                    "option": "b",
+                    "id": 2
+                },
+                {
+                    "title": "JavaScript is a compiled language used to make the website interactive",
+                    "option": "c",
+                    "id": 3
+                },
+                {
+                    "title": "None of the mentioned",
+                    "option": "d",
+                    "id": 4
+                }
+            ],
+            "answer": "JavaScript is a scripting language used to make the website interactive"
+        },
+        {
+            "question": "Which of the following is correct about JavaScript?",
+            "options": [
+                {
+                    "title": "JavaScript is an Object-Based language",
+                    "option": "a",
+                    "id": 1
+                },
+                {
+                    "title": "JavaScript is Assembly-language",
+                    "option": "b",
+                    "id": 2
+                },
+                {
+                    "title": "JavaScript is an Object-Oriented language",
+                    "option": "c",
+                    "id": 3
+                },
+                {
+                    "title": "JavaScript is a High-level language",
+                    "option": "d",
+                    "id": 4
+                }
+            ],
+            "answer": "JavaScript is an Object-Based language"
+        },
+        {
+            "question": "Among the given statements, which statement defines closures in JavaScript?",
+            "options": [
+                {
+                    "title": "JavaScript is a function that is enclosed with references to its inner function scope",
+                    "option": "a",
+                    "id": 1
+                },
+                {
+                    "title": "JavaScript is a function that is enclosed with references to its lexical environment",
+                    "option": "b",
+                    "id": 2
+                },
+                {
+                    "title": "JavaScript is a function that is enclosed with the object to its inner functionscope",
+                    "option": "c",
+                    "id": 3
+                },
+                {
+                    "title": "None of the mentioned",
+                    "option": "d",
+                    "id": 4
+                }
+            ],
+            "answer": "JavaScript is a function that is enclosed with references to its lexical environment"
+        },
+        {
+            "question": "Arrays in JavaScript are defined by which of the following statements?",
+            "options": [
+                {
+                    "title": "It is an ordered list of values",
+                    "option": "a",
+                    "id": 1
+                },
+                {
+                    "title": "It is an ordered list of objects",
+                    "option": "b",
+                    "id": 2
+                },
+                {
+                    "title": "It is an ordered list of string",
+                    "option": "c",
+                    "id": 3
+                },
+                {
+                    "title": "It is an ordered list of functions",
+                    "option": "d",
+                    "id": 4
+                }
+            ],
+            "answer": "It is an ordered list of values"
+        }
+    ]
+}
