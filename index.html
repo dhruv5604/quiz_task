@@ -5,65 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <marquee>Welcome to Quiz</marquee>
-    <div class="main">
-        <form action="" id="form1">
-            <div class="que">
-                <p>1. What is JavaScript? </p>
-                <input type="radio" id="a1" value="a" name="que1" class="ques">
-                <label for="a1">JavaScript is a scripting language used to make the website interactive</label> <br>
-                <input type="radio" name="que1" value="b" id="b1">
-                <label for="b1">JavaScript is an assembly language used to make the website interactive</label> <br>
-                <input type="radio" name="que1" value="c" id="c1">
-                <label for="c1">JavaScript is a compiled language used to make the website interactive</label> <br>
-                <input type="radio" name="que1" value="d" id="d1">
-                <label for="d1">None of the mentioned</label>
-            </div>
-
-            <div class="que">
-                <p>2. Which of the following is correct about JavaScript? </p>
-                <input type="radio" id="a2" value="a" name="que2" class="ques">
-                <label for="a2">JavaScript is an Object-Based language</label> <br>
-                <input type="radio" name="que2" value="b" id="b2">
-                <label for="b2">JavaScript is Assembly-language</label> <br>
-                <input type="radio" name="que2" value="c" id="c2">
-                <label for="c2">JavaScript is an Object-Oriented language</label> <br>
-                <input type="radio" name="que2" value="d" id="d2">
-                <label for="d2">JavaScript is a High-level language</label>
-            </div>
-
-            <div class="que">
-                <p>3. Among the given statements, which statement defines closures in JavaScript? </p>
-                <input type="radio" id="a3" value="a" name="que3" class="ques">
-                <label for="a3">JavaScript is an Object-Based language</label> <br>
-                <input type="radio" name="que3" value="b" id="b3">
-                <label for="b3">JavaScript is Assembly-language</label> <br>
-                <input type="radio" name="que3" value="c" id="c3">
-                <label for="c3">JavaScript is an Object-Oriented language</label> <br>
-                <input type="radio" name="que3" value="d" id="d3">
-                <label for="d3">JavaScript is a High-level language</label>
-            </div>
-
-            <div class="que">
-                <p>4. Arrays in JavaScript are defined by which of the following statements? </p>
-                <input type="radio" id="a4" value="a" name="que4" class="ques">
-                <label for="a4">JavaScript is an Object-Based language</label> <br>
-                <input type="radio" name="que4" value="b" id="b4">
-                <label for="b4">JavaScript is Assembly-language</label> <br>
-                <input type="radio" name="que4" value="c" id="c4">
-                <label for="c4">JavaScript is an Object-Oriented language</label> <br>
-                <input type="radio" name="que4" value="d" id="d4">
-                <label for="d4">JavaScript is a High-level language</label>
-            </div>
-
-            <br>
-            <input type="submit" value="sumbit">
-        </form>
+    <div class="container">
+        <h1>Quiz App</h1>
+        <div id="quiz"></div>
+        <div id="result" class="result"></div>
+        <button id="submit" class="button">Submit</button>
+        <button id="retry" class="button hide">Retry</button>
+        <button id="showAnswer" class="button hide">Show Answer</button>
     </div>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
+    <noscript>Your browser doesn't support Javascript...</noscript>
 </body>
 
 </html>
